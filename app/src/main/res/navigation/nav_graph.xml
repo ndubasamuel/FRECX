@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/indicatorViewPagerFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.example.frecx.onboarding.regscreens.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_recoverPassPhoneFragment"
+            app:destination="@id/recoverPassPhoneFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.frecx.onboarding.regscreens.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" />
+    <fragment
+        android:id="@+id/recoverPassEmailFragment"
+        android:name="com.example.frecx.onboarding.regscreens.RecoverPassEmailFragment"
+        android:label="fragment_recover_pass_email"
+        tools:layout="@layout/fragment_recover_pass_email" >
+        <action
+            android:id="@+id/action_recoverPassEmailFragment_to_recoverPassPhoneFragment"
+            app:destination="@id/recoverPassPhoneFragment" />
+        <action
+            android:id="@+id/action_recoverPassEmailFragment_to_emailVerificationFragment"
+            app:destination="@id/emailVerificationFragment" />
+        <action
+            android:id="@+id/action_recoverPassEmailFragment_to_recoverPassPhoneFragment2"
+            app:destination="@id/recoverPassPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recoverPassPhoneFragment"
+        android:name="com.example.frecx.onboarding.regscreens.RecoverPassPhoneFragment"
+        android:label="fragment_recover_pass_phone"
+        tools:layout="@layout/fragment_recover_pass_phone" >
+        <action
+            android:id="@+id/action_recoverPassPhoneFragment_to_recoverPassEmailFragment"
+            app:destination="@id/recoverPassEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailVerificationFragment"
+        android:name="com.example.frecx.onboarding.regscreens.EmailVerificationFragment"
+        android:label="fragment_email_verification"
+        tools:layout="@layout/fragment_email_verification" >
+        <action
+            android:id="@+id/action_emailVerificationFragment_to_phoneVerification"
+            app:destination="@id/phoneVerification" />
+        <action
+            android:id="@+id/action_emailVerificationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneVerification"
+        android:name="com.example.frecx.onboarding.regscreens.PhoneVerification"
+        android:label="fragment_phone_verification"
+        tools:layout="@layout/fragment_phone_verification" >
+        <action
+            android:id="@+id/action_phoneVerification_to_emailVerificationFragment"
+            app:destination="@id/emailVerificationFragment" />
+        <action
+            android:id="@+id/action_phoneVerification_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.frecx.onboarding.regscreens.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/indicatorViewPagerFragment"
+        android:name="com.example.frecx.onboarding.IndicatorViewPagerFragment"
+        android:label="fragment_indicator_view_pager"
+        tools:layout="@layout/fragment_indicator_view_pager" >
+        <action
+            android:id="@+id/action_indicatorViewPagerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
