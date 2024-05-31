@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/loginFragment"
         tools:layout="@layout/fragment_login"
-        android:name="com.example.frecx.onboarding.regscreens.LoginFragment"
+        android:name="com.example.frecx.ui.View.regscreens.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_createAccountFragment"
@@ -22,12 +22,14 @@
     </fragment>
     <fragment
         android:id="@+id/createAccountFragment"
-        android:name="com.example.frecx.onboarding.regscreens.CreateAccountFragment"
+        android:name="com.example.frecx.ui.View.regscreens.CreateAccountFragment"
         android:label="fragment_create_account"
-        tools:layout="@layout/fragment_create_account" />
+        tools:layout="@layout/fragment_create_account" >
+        <action android:id="@+id/action_createAccountFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+    </fragment>
     <fragment
         android:id="@+id/recoverPassEmailFragment"
-        android:name="com.example.frecx.onboarding.regscreens.RecoverPassEmailFragment"
+        android:name="com.example.frecx.ui.View.regscreens.RecoverPassEmailFragment"
         android:label="fragment_recover_pass_email"
         tools:layout="@layout/fragment_recover_pass_email" >
         <action
@@ -42,16 +44,17 @@
     </fragment>
     <fragment
         android:id="@+id/recoverPassPhoneFragment"
-        android:name="com.example.frecx.onboarding.regscreens.RecoverPassPhoneFragment"
+        android:name="com.example.frecx.ui.View.regscreens.RecoverPassPhoneFragment"
         android:label="fragment_recover_pass_phone"
         tools:layout="@layout/fragment_recover_pass_phone" >
         <action
             android:id="@+id/action_recoverPassPhoneFragment_to_recoverPassEmailFragment"
             app:destination="@id/recoverPassEmailFragment" />
+        <action android:id="@+id/action_recoverPassPhoneFragment_to_loginFragment" app:destination="@id/loginFragment"/>
     </fragment>
     <fragment
         android:id="@+id/emailVerificationFragment"
-        android:name="com.example.frecx.onboarding.regscreens.EmailVerificationFragment"
+        android:name="com.example.frecx.ui.View.regscreens.EmailVerificationFragment"
         android:label="fragment_email_verification"
         tools:layout="@layout/fragment_email_verification" >
         <action
@@ -63,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/phoneVerification"
-        android:name="com.example.frecx.onboarding.regscreens.PhoneVerification"
+        android:name="com.example.frecx.ui.View.regscreens.PhoneVerification"
         android:label="fragment_phone_verification"
         tools:layout="@layout/fragment_phone_verification" >
         <action
@@ -75,12 +78,12 @@
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
-        android:name="com.example.frecx.onboarding.regscreens.ChangePasswordFragment"
+        android:name="com.example.frecx.ui.View.regscreens.ChangePasswordFragment"
         android:label="fragment_change_password"
         tools:layout="@layout/fragment_change_password" />
     <fragment
         android:id="@+id/indicatorViewPagerFragment"
-        android:name="com.example.frecx.onboarding.IndicatorViewPagerFragment"
+        android:name="com.example.frecx.ui.View.IndicatorViewPagerFragment"
         android:label="fragment_indicator_view_pager"
         tools:layout="@layout/fragment_indicator_view_pager" >
         <action

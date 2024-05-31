@@ -1,4 +1,4 @@
-package com.example.frecx.onboarding
+package com.example.frecx.ui.View
 
 import com.example.frecx.R
 
